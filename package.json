@@ -1,25 +1,27 @@
 {
     "name": "sap-lst",
     "productName": "List Builder For SAP",
-    "version": "0.0.3",
-    "description": "Creador de listas para SAP",
+    "version": "0.1.0",
+    "description": "Playlist Creator for SAP Playout",
+    "repository": "https://github.com/DANIELXCERON/saplst.git",
     "main": "src/main.js",
     "scripts": {
         "start": "electron . ",
-        "dist": "yarn electron-builder --config electron-builder/base.config.js"
+        "pack": "electron-builder --dir",
+        "dist": "yarn electron-builder --x64 --win --config electron-builder/base.config.js"
     },
     "keywords": [],
     "author": {
         "name": "Daniel Alfonso Ceron Claros"
     },
-    "license": "ISC",
+    "license": "MIT",
     "dependencies": {
         "ffprobe": "^1.1.0",
         "ffprobe-static": "^3.0.0",
         "jquery": "^3.5.1"
     },
     "devDependencies": {
-        "electron": "^10.1.3",
-        "electron-builder": "^22.8.1"
+        "electron": "^11.2.3",
+        "electron-builder": "^22.9.1"
     }
 }

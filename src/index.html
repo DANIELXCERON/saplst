@@ -1,68 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="./css/styles.css" />
     <link rel="stylesheet" type="text/css" href="./css/dark-mode.css" />
+
+    <!-- ICONOS -->
     <link rel="stylesheet" type="text/css" href="./css/icon.css" />
     <link rel="stylesheet" type="text/css" href="./css/pro.css" />
 
-    <!--https://izitoast.marcelodolza.com/-->
+    <!-- https://izitoast.marcelodolza.com/ NOTIFICACIONES -->
     <link rel="stylesheet" type="text/css" href="./css/iziToast.min.css" />
 
-    <!-- <link rel="stylesheet" href="./css/newlist.css"> -->
-
     <script src="./ag-grid/ag-grid-enterprise.min.js"></script>
-</head>
+  </head>
 
-<body onkeydown="keyPress(event)">
-
+  <body onkeydown="keyPress(event)">
     <div class="wrapper">
-        <div class="one">
-            <div id="marcoVideoLocal">
-                <video id="videoPlayLocal" src="" autoplay width="368" height="207" muted controls></video>
-            </div>
+      <div class="one">
+        <div id="marcoVideoLocal">
+          <video
+            id="videoPlayLocal"
+            src=""
+            autoplay
+            width="368"
+            height="207"
+            muted
+            controls
+          ></video>
         </div>
-        <div class="two">
-            <div>
-                <div class="col-md-12">
-                    <div id="make_new_list_container" style="height: 425px; width: -webkit-fill-available;"
-                        class="ag-theme-balham-dark"></div>
-                </div>
-            </div>
+      </div>
+      <div class="two">
+        <div>
+          <div class="col-md-12">
+            <div
+              id="make_new_list_container"
+              style="height: 425px; width: -webkit-fill-available"
+              class="ag-theme-balham-dark"
+            ></div>
+          </div>
         </div>
-        <div class="three">
-            <div>
-                <span id="InfoListViewDOM"></span>
-                <span id="InfoListViewDOM_selection"></span>
-            </div>
+      </div>
+      <div class="three">
+        <div>
+          <span id="InfoListViewDOM"></span>
+          <span id="InfoListViewDOM_selection"></span>
         </div>
-
+      </div>
     </div>
-
 
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-12">
-
-            </div>
-        </div>
-        <div class="row">
-
-        </div>
+      <div class="row">
+        <div class="col-12"></div>
+      </div>
+      <div class="row"></div>
     </div>
+
+    
     <!-- SCRIPTS -->
     <!-- JQuery -->
-    <script>window.$ = window.jQuery = require('jquery');</script>
+    <script>
+      window.$ = window.jQuery = require("jquery");
+    </script>
     <!-- Bootstrap core JavaScript -->
-    <script src="./js/min/iziToast.min.js"></script>
     <script src="./js/min/bootstrap.min.js"></script>
+    <!--https://izitoast.marcelodolza.com/ NOTIFICACIONES-->
+    <script src="./js/min/iziToast.min.js"></script>
+
     <script src="./js/locale.es.js"></script>
     <script src="./js/index.js"></script>
     <script src="./js/dark-mode-listen.js"></script>
-</body>
-
+  </body>
 </html>
