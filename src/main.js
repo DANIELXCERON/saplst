@@ -33,6 +33,7 @@ function openMainWindow() {
     webPreferences: {
       webviewTag: true,
       nodeIntegration: true,
+      contextIsolation: false,
       enableRemoteModule: true,
     },
   });
