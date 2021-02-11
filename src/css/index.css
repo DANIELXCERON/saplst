@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+
+/** Personalizacion de celdas de la grilla*/
+
+.bg_id_Block {
+    background: #34495e;
+}
+
+.bg_id_Next {
+    background: #27ae60;
+}
+
+.bg_id_Current {
+    background: #2980b9;
+}
+
+.bg_id_Scheduler {
+    background: #b92929;
+}
+
+.bg_id_invalid {
+    background: #f1c40f;
+}
