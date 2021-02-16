@@ -4,17 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="./bootstrap/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="./css/styles.css" />
     <link rel="stylesheet" type="text/css" href="./css/dark-mode.css" />
 
     <!-- ICONOS -->
-    <link rel="stylesheet" type="text/css" href="./css/icon.css" />
-    <link rel="stylesheet" type="text/css" href="./css/pro.css" />
+    <link rel="stylesheet" type="text/css" href="./font-awesome/pro.css" />
+    <link rel="stylesheet" type="text/css" href="./material-icons/material-icons.css" />
 
     <!-- https://izitoast.marcelodolza.com/ NOTIFICACIONES -->
-    <link rel="stylesheet" type="text/css" href="./css/iziToast.min.css" />
+    <link rel="stylesheet" type="text/css" href="./izitoast/iziToast.min.css" />
 
+    <!-- Ag-Grid -->
     <script src="./ag-grid/ag-grid-enterprise.min.js"></script>
   </head>
 
@@ -22,15 +23,7 @@
     <div class="wrapper">
       <div class="one">
         <div id="marcoVideoLocal">
-          <video
-            id="videoPlayLocal"
-            src=""
-            autoplay
-            width="368"
-            height="207"
-            muted
-            controls
-          ></video>
+          <video id="videoPlayLocal" src="" autoplay width="368" height="207" muted controls></video>
         </div>
       </div>
       <div class="two">
@@ -62,13 +55,12 @@
     
     <!-- SCRIPTS -->
     <!-- JQuery -->
-    <script>
-      window.$ = window.jQuery = require("jquery");
-    </script>
+    <script>window.$ = window.jQuery = require("jquery");</script>
     <!-- Bootstrap core JavaScript -->
-    <script src="./js/min/bootstrap.min.js"></script>
+    <script src="./bootstrap/bootstrap.min.js"></script>
+
     <!--https://izitoast.marcelodolza.com/ NOTIFICACIONES-->
-    <script src="./js/min/iziToast.min.js"></script>
+    <script src="./izitoast/iziToast.min.js"></script>
 
     <script src="./js/locale.es.js"></script>
     <script src="./js/index.js"></script>

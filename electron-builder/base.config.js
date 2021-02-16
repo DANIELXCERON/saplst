@@ -19,13 +19,16 @@ const base = {
     env: "production",
   },
   win: {
-    extraResources: [],
-    extraFiles: [
-      "README.html",
-      // {
-      //   from: "config",
-      //   to: "config",
-      // },
+    target: [
+      {
+        target: "nsis",
+        arch: ["x64"],
+      },
+    ],
+    publish: [
+      {
+        provider: "github"
+      }
     ],
   },
   fileAssociations: [
