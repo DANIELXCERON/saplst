@@ -52,6 +52,11 @@ const gridOptions = {
       field: "duration",
       cellRenderer: "durationRender",
     },
+    {
+      width: 100,
+      headerName: "Establecido",
+      field: "settled",
+    },
     { width: 105, headerName: "Tipo", field: "ref", cellRenderer: "refRender" },
     { width: 105, headerName: "Fecha", field: "date" },
     { width: 430, headerName: "Ruta", field: "path" },
@@ -108,7 +113,6 @@ gridOptions.api.applyTransaction({ add: [] });
 function getContextMenuItems(params) {
   var result = [
     {
-      // custom item
       name: "Revelar en el explorador de archivos",
       action: function () {
         shell.showItemInFolder(params.node.data.path);
@@ -118,7 +122,29 @@ function getContextMenuItems(params) {
       icon: '<span class="material-icons">folder</span>',
     },
     {
-      // custom item
+      name: "Establecer como separador",
+      subMenu: [
+        {
+          name: "Inicial",
+          action: function () {
+            var rowNode = gridOptions.api.getRowNode(params.node.id);
+            console.log(params)
+            rowNode.setDataValue("settled", "Inicial");
+            console.log("Se establecio como cortinilla Inicial");
+          },
+        },
+        {
+          name: "Final",
+          action: function () {
+            console.log(params)
+            var rowNode = gridOptions.api.getRowNode(params.node.id);
+            rowNode.setDataValue("settled", "Final");
+            console.log("Se establecio como cortinilla Final");
+          },
+        },
+      ],
+    },
+    {
       name: "Reproducir",
       action: function () {
         videoPlay(params.node.data.path);
@@ -336,6 +362,7 @@ gridDiv.addEventListener("drop", (e) => {
                       path: file.path,
                       duration: info.streams[1].duration,
                       temp: false,
+                      settled: "",
                       custom: "bg_id_plst",
                       in: 0,
                       date: getFileModDateLast(file),
