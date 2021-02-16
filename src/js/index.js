@@ -54,8 +54,8 @@ const gridOptions = {
     },
     {
       width: 100,
-      headerName: "Establecido",
-      field: "settled",
+      headerName: "Cortinilla de",
+      field: "curtain",
     },
     { width: 105, headerName: "Tipo", field: "ref", cellRenderer: "refRender" },
     { width: 105, headerName: "Fecha", field: "date" },
@@ -122,23 +122,24 @@ function getContextMenuItems(params) {
       icon: '<span class="material-icons">folder</span>',
     },
     {
-      name: "Establecer como separador",
+      name: "Establecer como cortinilla de",
+      tooltip: "Define uno de los video como cortinilla de inicio y final.",
       subMenu: [
         {
-          name: "Inicial",
+          name: "inicio",
           action: function () {
             var rowNode = gridOptions.api.getRowNode(params.node.id);
             console.log(params)
-            rowNode.setDataValue("settled", "Inicial");
-            console.log("Se establecio como cortinilla Inicial");
+            rowNode.setDataValue("curtain", "inicio");
+            console.log("Se establecio como cortinilla de inicia");
           },
         },
         {
-          name: "Final",
+          name: "fin",
           action: function () {
             console.log(params)
             var rowNode = gridOptions.api.getRowNode(params.node.id);
-            rowNode.setDataValue("settled", "Final");
+            rowNode.setDataValue("curtain", "fin");
             console.log("Se establecio como cortinilla Final");
           },
         },
@@ -362,7 +363,7 @@ gridDiv.addEventListener("drop", (e) => {
                       path: file.path,
                       duration: info.streams[1].duration,
                       temp: false,
-                      settled: "",
+                      curtain: "",
                       custom: "bg_id_plst",
                       in: 0,
                       date: getFileModDateLast(file),
