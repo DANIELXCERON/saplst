@@ -129,18 +129,20 @@ function getContextMenuItems(params) {
           name: "inicio",
           action: function () {
             var rowNode = gridOptions.api.getRowNode(params.node.id);
-            console.log(params)
             rowNode.setDataValue("curtain", "inicio");
-            console.log("Se establecio como cortinilla de inicia");
           },
         },
         {
           name: "fin",
           action: function () {
-            console.log(params)
             var rowNode = gridOptions.api.getRowNode(params.node.id);
             rowNode.setDataValue("curtain", "fin");
-            console.log("Se establecio como cortinilla Final");
+          },
+        },{
+          name: "rating",
+          action: function () {
+            var rowNode = gridOptions.api.getRowNode(params.node.id);
+            rowNode.setDataValue("curtain", "rating");
           },
         },
       ],
@@ -314,9 +316,7 @@ function saveAsListJsonFile() {
 
 /** ver duracion de la seleccion */
 const InfoListViewDOM = document.querySelector("#InfoListViewDOM");
-const InfoListViewDOM_selection = document.querySelector(
-  "#InfoListViewDOM_selection"
-);
+const InfoListViewDOM_selection = document.querySelector("#InfoListViewDOM_selection");
 
 const videoPlayLocal = document.querySelector("#videoPlayLocal");
 
