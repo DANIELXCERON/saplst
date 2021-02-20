@@ -225,6 +225,15 @@ ipcRenderer.on("openListJsonFile", () => {
     });
 });
 
+/** crear nueva lista */
+ipcRenderer.on("newListJsonFile", () => {
+  //eliminar todos los items
+  gridOptions.api.setRowData([]);
+
+  //limpiar plst-path del sessionStorage
+  sessionStorage.removeItem("plst-path");
+});
+
 /**Funcion para abrir archivo en la app */
 function openPlst(ruta) {
   /**se guarda la ruta del archivo plst guardado */
@@ -270,7 +279,6 @@ function getContentList() {
 ipcRenderer.on("saveListJsonFile", () => {
   if (getContentList()[1].length > 0) {
     // si hay datos en la lista
-    console.log("nada");
     if (sessionStorage.getItem("plst-path")) {
       // si es la misma lista en session
       savePlst(sessionStorage.getItem("plst-path"));

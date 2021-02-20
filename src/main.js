@@ -75,7 +75,14 @@ const MainWindowMenu = [
     label: "Archivo",
     submenu: [
       {
-        label: "Abrir...",
+        label: "Nuevo",
+        accelerator: "Ctrl+N",
+        click() {
+          mainWindow.webContents.send("newListJsonFile");
+        },
+      },
+      {
+        label: "Abrir",
         accelerator: "Ctrl+O",
         click() {
           mainWindow.webContents.send("openListJsonFile");
