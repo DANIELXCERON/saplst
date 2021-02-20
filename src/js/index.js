@@ -138,11 +138,19 @@ function getContextMenuItems(params) {
             var rowNode = gridOptions.api.getRowNode(params.node.id);
             rowNode.setDataValue("curtain", "fin");
           },
-        },{
+        },
+        {
           name: "rating",
           action: function () {
             var rowNode = gridOptions.api.getRowNode(params.node.id);
             rowNode.setDataValue("curtain", "rating");
+          },
+        },
+        {
+          name: "ninguno",
+          action: function () {
+            var rowNode = gridOptions.api.getRowNode(params.node.id);
+            rowNode.setDataValue("curtain", "");
           },
         },
       ],
