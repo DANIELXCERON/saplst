@@ -363,22 +363,6 @@ gridDiv.addEventListener("drop", (e) => {
       //si el archivo es una lista plst o json
       openPlst(file.path);
     } else {
-      //https://medium.com/@JackPu/how-js-get-video-codec-548a33cf7454
-      let v = document.createElement('video')
-      v.setAttribute('src', file.path)
-      v.onloadeddata = function (e) {
-          const {
-              videoHeight,
-              videoWidth,
-              duration,
-              baseURI,
-              currentSrc
-          } = e.srcElement
-          console.log(e)
-          v = null
-      }
-      
-
       // si no, lo toma como archivo de video
       ffprobe(file.path, { path: ffprobeStatic.path })
         .then(function (info) {
